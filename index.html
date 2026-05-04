@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mood Flow Debug</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body class="all">
+
+    <h1>Personal Diary According to mood</h1>
+
+    <div class="box">
+        <select id="moodSelect">
+            <option value="happy">😊 Happy</option>
+            <option value="sad">😢 Sad</option>
+            <option value="angry">😠 Angry</option>
+            <option value="tired">😴 Tired</option>
+            <option value="peaceful">☮ Peaceful</option>
+            <option value="lovely">😍 Lovely</option>
+        </select>
+        <textarea id="entryText" placeholder="How are you feeling today?"></textarea>
+        <button id="saveBtn" onclick="addEntry()">Save Entry</button>
+    </div>
+
+    <div style="margin: 20px;">
+        <button class="filter-btn" onclick="changeMood('all')">All</button>
+        <button class="filter-btn" onclick="changeMood('happy')">Happy</button>
+        <button class="filter-btn" onclick="changeMood('sad')">Sad</button>
+        <button class="filter-btn" onclick="changeMood('angry')">Angry</button>
+        <button class="filter-btn" onclick="changeMood('tired')">Tired</button>
+        <button class="filter-btn" onclick="changeMood('peaceful')">Peaceful</button>
+        <button class="filter-btn" onclick="changeMood('lovely')">Lovely</button>
+    </div>
+
+    <div id="list" style="max-width: 400px; margin: auto;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
